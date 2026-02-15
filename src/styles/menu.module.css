@@ -1,0 +1,118 @@
+/* Container for the whole menu page */
+.menuContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Category Section */
+.category {
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b86b2c; /* warm accent */
+  border-bottom: 2px solid #f0c27b;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Items grid inside a category */
+.itemsGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row on desktop */
+}
+
+/* Individual item card */
+.itemCard {
+  background: #fff8f0;
+  border-radius: 16px; /* rounded card */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  border: 1px solid #f0e3d8; /* soft border to separate cards */
+}
+
+.itemCard:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(184,107,44,0.3); /* warm glow */
+}
+
+/* Item image */
+.itemImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px; /* rounded image inside card */
+  border-bottom: 1px solid #eee;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.itemCard:hover .itemImage {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(184,107,44,0.3); /* glow effect */
+}
+
+/* Content inside item */
+.itemContent {
+  padding: 1rem;
+}
+
+.itemTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #b86b2c;
+  margin-bottom: 0.5rem;
+}
+
+.itemDescription {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.itemPrice {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  background: #b86b2c;
+  color: #fff8f0;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+
+.footer a {
+  color: #fff8f0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* Responsive: Tablet */
+@media screen and (max-width: 1024px) {
+  .itemsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 768px) {
+  .itemsGrid {
+    grid-template-columns: 1fr;
+  }
+}

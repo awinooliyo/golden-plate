@@ -1,0 +1,166 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(to bottom, #fff8f0, #ffe7d1);
+  color: #333;
+}
+
+header {
+  background: #fdd7a0;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #f3c78e;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff8f0;
+  border-bottom: 2px solid #f0c27b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+} */
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-family: "Brush Script MT", cursive; /* fancy cursive font */
+  font-size: 2.2rem;
+  color: #b86b2c; /* warm accent */
+  letter-spacing: 2px;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.2),
+    0 0 8px rgba(184,107,44,0.5); /* subtle glow */
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.logoText:hover {
+  text-shadow: 
+    2px 2px 6px rgba(0,0,0,0.3),
+    0 0 12px rgba(184,107,44,0.8),
+    0 0 16px rgba(255,198,102,0.5); /* glowing hover effect */
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Nav aligned to the right */
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;  /* pushes nav to the right */
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+button {
+  background: transparent;
+  border: 1px solid #e4b87c;
+  color: #333;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #f3c78e;
+  border-color: #f3c78e;
+  color: #111;
+}
+
+button.active {
+  background: #e4b87c;
+  color: #fff;
+  border-color: #e4b87c;
+}
+
+#content {
+  padding: 3rem 2rem;
+  min-height: 70vh;
+  transition: opacity 0.3s ease;
+}
+
+/* Global Footer */
+/* Footer for all pages */
+.footer {
+  margin-top: 3rem;
+  background: #b86b2c; /* warm accent */
+  color: #fff8f0;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.footer a {
+  color: #fff8f0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer .footer-contact {
+  margin-top: 1rem;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+}
+
+
+/* Menu cards responsive columns */
+@media screen and (max-width: 1024px) {
+  /* For tablets, 2 columns */
+  .itemsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* For mobiles, 3 columns in menu */
+  .itemsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  nav {
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Very small screens, 1 column */
+  .itemsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+}

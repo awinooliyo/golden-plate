@@ -1,0 +1,32 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headline {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #b45309;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+}
+
+.contactList li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  background: #fff3e0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  color: #333;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.contactList li strong {
+  color: #d97706;
+}
